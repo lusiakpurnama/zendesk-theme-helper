@@ -9,8 +9,13 @@ At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Custom
 
 Example of usage: `gulpfile.js`
 
-## Requirement
+
+## How to install
 Node >= 4
+Add this line to package.json dependencies:
+```
+"zendesk-theme-helper": "git+ssh://git@github.com:lusimail/zendesk-theme-helper.git#master"
+```
 
 
 ## Preparing config data
