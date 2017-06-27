@@ -7,8 +7,6 @@ Based on [Zendesk Guide Pusher](https://github.com/Cloudhuset/Zendesk-Guide-Push
 A tool to help you download and upload zendesk help center, allow you to be able to version control your theme. Note that this is only for `html`, `css` and `js`. For the `assets` and `Appearance` need to be done in the Zendesk theme editor.
 At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Customize design (Eye icon)`
 
-Example of usage: `gulpfile.js`
-
 
 ## How to install
 Node >= 4
