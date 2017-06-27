@@ -1,0 +1,26 @@
+{
+  "name": "zendesk-theme-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lusimail/zendesk-theme-helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lusimail/zendesk-theme-helper/issues"
+  },
+  "homepage": "https://github.com/lusimail/zendesk-theme-helper#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "lodash": "4.17.4",
+    "mkdirp-promise": "5.0.1",
+    "request": "2.81.0",
+    "when": "3.7.8"
+  }
+}
