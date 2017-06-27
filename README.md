@@ -9,7 +9,7 @@ At the time of writing, the theme editor is in `Guide` > `Guide Admin` > `Custom
 
 
 ## How to install
-Node >= 4
+Node >= 4  
 Add this line to package.json dependencies:
 ```
 "zendesk-theme-helper": "git+ssh://git@github.com:lusimail/zendesk-theme-helper.git#master"
@@ -22,24 +22,24 @@ Add this line to package.json dependencies:
 * Make a change to a file and click save
 * Find the PUT request to `https://yourdomain.zendesk.com/hc/admin/help_centers/{your_help_center_id}`.
 * Grab the Cookie and X-CSRF-Token from the request headers and the "help center id" and "theme id" from the response, keep them in this format:
-    __Note: Cookie and X-CSRF-Token will change everytime you login__
-    ```
-    {
-      HOST: '<yourdomain.zendesk.com>',
-      HC_ID: '<your_help_center_id>',
-      THEME_ID: '',
-      COOKIE: '',
-      CSRF_TOKEN: ''
-    }
-    ```
+  __Note: Cookie and X-CSRF-Token will change everytime you login__
+  ```
+  {
+    HOST: '<yourdomain.zendesk.com>',
+    HC_ID: '<your_help_center_id>',
+    THEME_ID: '',
+    COOKIE: '',
+    CSRF_TOKEN: ''
+  }
+  ```
 
 
 ## Functions
 
 ### download(config)
-__Returns:__ promise
+__Returns:__ promise  
 Will download the theme files (html, css, js) and saved them in `theme` folder
 
 ### upload(config)
-__Returns:__ promise
+__Returns:__ promise  
 Will process the theme files, upload, and publish.
