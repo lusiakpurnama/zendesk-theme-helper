@@ -19,3 +19,10 @@ gulp.task('upload', function(done) {
 		done();
 	});
 });
+
+gulp.task('publish', function(done) {
+	theme.publish(config)
+	.then(function() {
+		done();
+	});
+});

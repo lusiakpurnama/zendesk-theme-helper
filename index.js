@@ -47,7 +47,7 @@ var download = function(config) {
 	return defer.promise
 		.then(function() { return when.all(filesPromises) })
 		.then(function() {
-			// console.log('Downloading theme files - Done');
+			// console.log('Downloading theme files - Done', res.statusCode);
 		})
 }
 
@@ -70,7 +70,7 @@ var _upload = function(config, themeContent) {
 		json: true
 	}, function(err, res, body) {
 		if (err) { console.error(err); defer.reject(err); return; }
-		// console.log('Uploading theme content - Done');
+		// console.log('Uploading theme content - Done', res.statusCode);
 		defer.resolve();
 	});
 	return defer.promise;
@@ -97,9 +97,10 @@ var publish = function(config) {
 	}
 	request('https://'+config.HOST+'/hc/admin/help_centers/'+config.THEME_ID, options, function(err, res, body) {
 		if (err) { console.error(err); defer.reject(err); return; }
+		// console.log('Publishing theme - Step 1 Done', res.statusCode);
 		request('https://'+config.HOST+'/hc/admin/help_centers/'+config.THEME_ID+'/apply', options, function(err, res, body) {
 			if (err) { console.error(err); defer.reject(err); return; }
-			// console.log('Publishing theme - Done');
+			// console.log('Publishing theme - Done', res.statusCode);
 			defer.resolve();
 		});
 	});
@@ -160,11 +161,11 @@ var processContent = function() {
 var upload = function(config) {
 	return processContent()
 		.then(function(content) { return _upload(config, content); })
-		.then(function() { return publish(config); })
 }
 
 
 module.exports = {
 	download,
-	upload
+	upload,
+	publish
 }
