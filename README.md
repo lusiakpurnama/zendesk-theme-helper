@@ -42,4 +42,9 @@ Will download the theme files (html, css, js) and saved them in `theme` folder
 
 ### upload(config)
 __Returns:__ promise  
-Will process the theme files, upload, and publish.
+Will process the theme files and upload (__won't publish__). You can then check your changes in the Zendesk theme editor.  
+__Note: Using this function somehow won't change the publish button state in the theme editor. Need to run the publish function below for publishing.__
+
+### publish(config)
+__Returns:__ promise  
+Will publish whatever in the theme editor.
