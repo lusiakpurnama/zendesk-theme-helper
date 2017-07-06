@@ -1,6 +1,6 @@
 # Zendesk Theme Helper
 
-Based on [Zendesk Guide Pusher](https://github.com/Cloudhuset/Zendesk-Guide-Pusher)
+Based on and merged to [Zendesk Guide Pusher](https://github.com/Cloudhuset/Zendesk-Guide-Pusher)
 
 
 ## What is this?
